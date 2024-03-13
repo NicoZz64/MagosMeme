@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wizarding Memes</title>
+
   <link rel="stylesheet" href="style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,9 +14,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+
+  <button onclick="playMusic()">Reproducir Audio</button>
+  <button onclick="pauseMusic()">Pausar Audio</button>
+
+  <audio id="music">
+    <source src="assets/audio/1.mp3" type="audio/mpeg">
+    <source src="assets/audio/2.ogg" type="audio/ogg">
+  </audio>
 
   <h1>Memes de Magos :P</h1>
 
@@ -51,6 +61,24 @@
       <p>(...)</p>
     </div>
   </div> -->
+  
+  <!-- SCRIPT DEL AUDIO -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  <script>
+    function playMusic() {
+      var audio = document.getElementById("music");
+      audio.play();
+    }
+    function pauseMusic(){
+      var audio = document.getElementById("music");
+      audio.pause();
+    }
+    
+    $(document).ready(function() {
+      setTimeout(playMusic, 3000); // Reproducir después de 3 segundos (opcional)
+    });
+  </script>
 
 </body>
+
 </html>
