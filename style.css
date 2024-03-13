@@ -11,15 +11,15 @@ html{
 
 .content{
     background-color: black;
-    width: 60%;
+    width: 44em;
     padding: 30px;
     border: 5px solid white;
 }
 
 .meme{
-    height: 300px;
-    width: 300px;
+    width: 19em;
     border: 2px solid white;
+    object-fit: contain;
 }
 
 h1{
